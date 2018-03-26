@@ -12,6 +12,7 @@ def search_py(path, needle):
         for line in f:
             words = line.split(' ')
             for word in words:
+                word = ''.join([ch for ch in word if ch.isalpha()])
                 if word == needle:
                     total += 1
     return total
